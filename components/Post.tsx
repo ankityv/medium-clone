@@ -29,11 +29,10 @@ export function Post({ post }: types) {
             .then((response) => console.trace('🤵', response))
     }
 
-
     return (
         <>
             {post && <div>
-                <Image src={urlFor(post.mainImage.asset._ref).url()!} alt={post.title} width={0} height={0} sizes="100vw" className="w-full h-40 object-cover" />
+                <Image src={urlFor(post.mainImage.asset._ref).url()!} alt={post.title} width={0} height={0} sizes="100vw" className="w-full h-[500px] object-cover" />
                 <article className="max-w-3xl mx-auto p-5">
                     <h1 className="text-3xl mt-10 mb-3">{post.title}</h1>
                     <h1 className="text-xl font-light text-gray-500 mt-10 mb-2">{post.description}</h1>
